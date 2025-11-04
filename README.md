@@ -2,9 +2,13 @@
 
 Proyek Laravel untuk membuat Superapp peradilan, menggabungkan fitur administrasi, manajemen perkara, dan peran pengguna dalam satu aplikasi.
 
-## Fitur Utama
-- Login menggunakan NIP (Nomor Induk Pegawai)
-- Terintegrasi dengan SIMTEPA (https://simtepa.mahkamahagung.go.id/)
+## Fitur Utama (W.I.P)
+- Login menggunakan NIP (Nomor Induk Pegawai) 
+- User/Data Pegawai sudah Terintegrasi dengan SIMTEPA
+- Jurnal Perkara terintegrasi dengan SIPP lokal 
+- Data Saksi to PDF
+- Monitoring Arsip Perkara
+- Monitoring Cuti Pegawai
 
 ## Prasyarat
 - PHP 8.x
@@ -49,23 +53,11 @@ php artisan serve
 - Login dengan akun super admin yang dibuat melalui perintah artisan
 - Kelola pengguna, perkara, dan modul lain dari dashboard admin
 
-## Struktur Penting
-- app/ — logika aplikasi
-- routes/ — definisi rute web/API
-- database/migrations — migrasi skema
-- database/seeders — data awal
-- resources/ — tampilan frontend dan aset
-
 ## Kontribusi
 1. Fork repositori
 2. Buat branch fitur: `git checkout -b feat/nama-fitur`
 3. Commit dan push: `git commit -m "Tambah fitur X"` lalu `git push`
 4. Buat Pull Request yang deskriptif
-
-## Catatan
-- Perintah `php artisan shield:super-admin` adalah contoh; sesuaikan dengan proyek
-- Amankan file .env dan kredensial produksi
-- Login admin di /mimin
 
 ## Kontak
 creamynald@gmail.com
