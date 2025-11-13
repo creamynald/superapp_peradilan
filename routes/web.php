@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\frontend\pegawaiController;
+use App\Http\Controllers\frontend\penilaianPegawaiController;
 
 Route::get('/', function () {
     return view('maintenance');
@@ -29,3 +30,6 @@ Route::get('/test-fonnte', function () {
         'json'   => $response->json(),
     ];
 });
+
+Route::get('/isi-penilaian', [penilaianPegawaiController::class, 'showForm'])->name('evaluasi.form');
+Route::post('/isi-penilaian', [penilaianPegawaiController::class, 'store'])->name('evaluasi.store');

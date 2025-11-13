@@ -67,4 +67,9 @@ class Pegawai extends Model
         $percent = (int) floor(($filled / max($total, 1)) * 100);
         return max(0, min(100, $percent));
     }
+
+    public function evaluasi(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(PenilaianPegawai::class, 'employee_id');
+    }
 }
