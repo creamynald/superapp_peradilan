@@ -9,6 +9,7 @@ Proyek Laravel untuk membuat Superapp peradilan, menggabungkan fitur administras
 - Data Saksi to PDF
 - Monitoring Arsip Perkara
 - Monitoring Cuti Pegawai
+- Penilaian Internal Pegawai
 
 ## Prasyarat
 - PHP 8.x
