@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\frontend\pegawaiController;
 use App\Http\Controllers\frontend\penilaianPegawaiController;
+use App\Http\Controllers\frontend\kebersihanRuanganController;
 
 Route::get('/', function () {
     return view('maintenance');
@@ -33,3 +34,6 @@ Route::get('/test-fonnte', function () {
 
 Route::get('/isi-penilaian', [penilaianPegawaiController::class, 'showForm'])->name('evaluasi.form');
 Route::post('/isi-penilaian', [penilaianPegawaiController::class, 'store'])->name('evaluasi.store');
+
+Route::get('/kebersihan/scan/{ruangan_id}', [kebersihanRuanganController::class, 'scan'])->name('kebersihan.scan');
+Route::post('/kebersihan/submit/{ruangan_id}', [kebersihanRuanganController::class, 'submit'])->name('kebersihan.submit');
